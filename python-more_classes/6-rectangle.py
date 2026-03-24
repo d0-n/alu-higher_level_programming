@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module defines a Rectangle tracking instance count."""
+
+
 class Rectangle:
     """Rectangle that tracks number of instances."""
 

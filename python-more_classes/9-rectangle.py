@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module defines a Rectangle with a square classmethod."""
+
+
 class Rectangle:
     """Rectangle with square classmethod."""
 
@@ -67,6 +70,10 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
+
+    @staticmethod
+    def biggerorequal(rect_1, rect_2):
+        return Rectangle.bigger_or_equal(rect_1, rect_2)
 
     @classmethod
     def square(cls, size=0):

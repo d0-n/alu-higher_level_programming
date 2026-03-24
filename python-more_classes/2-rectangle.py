@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module defines a Rectangle with area and perimeter."""
+
+
 class Rectangle:
     """Rectangle with area and perimeter methods."""
 

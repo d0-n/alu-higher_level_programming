@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module defines a Rectangle with a recreatable repr."""
+
+
 class Rectangle:
     """Rectangle with recreatable repr."""
 

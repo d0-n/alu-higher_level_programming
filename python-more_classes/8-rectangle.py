@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module defines a Rectangle with area comparison."""
+
+
 class Rectangle:
     """Rectangle with area comparison static method."""
 
@@ -67,3 +70,7 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
+
+    @staticmethod
+    def biggerorequal(rect_1, rect_2):
+        return Rectangle.bigger_or_equal(rect_1, rect_2)

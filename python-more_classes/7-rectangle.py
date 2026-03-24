@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module defines a Rectangle with configurable symbol."""
+
+
 class Rectangle:
     """Rectangle with customizable print symbol."""
 

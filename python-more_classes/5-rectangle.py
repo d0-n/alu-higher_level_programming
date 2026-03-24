@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module defines a Rectangle with deletion behavior."""
+
+
 class Rectangle:
     """Rectangle with deletion message."""
 
