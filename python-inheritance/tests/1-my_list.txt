@@ -1,10 +1,16 @@
-This file contains tests for MyList.
+This file contains tests for task 1 MyList.
 
 >>> MyList = __import__('1-my_list').MyList
->>> ml = MyList([3, 1, 2])
+>>> ml = MyList([3, 1, 2, -5, 9])
+>>> isinstance(ml, list)
+True
 >>> print(ml)
-[3, 1, 2]
+[3, 1, 2, -5, 9]
 >>> ml.print_sorted()
-[1, 2, 3]
+[-5, 1, 2, 3, 9]
 >>> print(ml)
-[3, 1, 2]
+[3, 1, 2, -5, 9]
+
+>>> empty = MyList()
+>>> empty.print_sorted()
+[]
