@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Fetch and display the ALU intranet status page response details using urllib."""
+"""Fetch and display intranet status response details with urllib."""
 
 import urllib.request
 
 
 def main():
     """Send a GET request and print response body details."""
-    with urllib.request.urlopen("https://alu-intranet.hbtn.io/status") as response:
+    with urllib.request.urlopen("https://intranet.hbtn.io/status") as response:
         body = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(body)))
