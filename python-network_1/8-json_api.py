@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Query the local search API with a letter and print formatted JSON results."""
+"""Query the local search API and print formatted JSON results."""
 
 import sys
 import requests
@@ -11,11 +11,14 @@ def main():
     if len(sys.argv) > 1:
         letter = sys.argv[1]
 
-    response = requests.post("http://0.0.0.0:5000/search_user", data={"q": letter})
+    response = requests.post(
+        "http://0.0.0.0:5000/search_user",
+        data={"q": letter}
+    )
 
     try:
         data = response.json()
-        if data:
+        if isinstance(data, dict) and data:
             print("[{}] {}".format(data.get("id"), data.get("name")))
         else:
             print("No result")
