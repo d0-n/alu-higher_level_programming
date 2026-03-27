@@ -10,6 +10,46 @@ from models.square import Square
 class TestSquare(unittest.TestCase):
     """Test cases for Square behavior and methods."""
 
+    def test_square_one_exists(self):
+        """Test direct Square(1) initialization."""
+        s = Square(1)
+        self.assertEqual(s.size, 1)
+
+    def test_square_size_type_error(self):
+        """Test Square("1") raises TypeError."""
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square("1")
+
+    def test_square_x_type_error(self):
+        """Test Square(1, "2") raises TypeError."""
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(1, "2")
+
+    def test_square_y_type_error(self):
+        """Test Square(1, 2, "3") raises TypeError."""
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(1, 2, "3")
+
+    def test_square_size_negative(self):
+        """Test Square(-1) raises ValueError."""
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Square(-1)
+
+    def test_square_x_negative(self):
+        """Test Square(1, -2) raises ValueError."""
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+            Square(1, -2)
+
+    def test_square_y_negative(self):
+        """Test Square(1, 2, -3) raises ValueError."""
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+            Square(1, 2, -3)
+
+    def test_square_size_zero(self):
+        """Test Square(0) raises ValueError."""
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Square(0)
+
     def test_square_init(self):
         """Test Square initialization with defaults."""
         s = Square(5, 2, 3, 10)

@@ -55,6 +55,11 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
             Rectangle(2, -1)
 
+    def test_height_zero_value_error(self):
+        """Test Rectangle(1, 0) raises ValueError for height."""
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
+            Rectangle(1, 0)
+
     def test_x_value_error(self):
         """Test x raises ValueError when negative."""
         with self.assertRaisesRegex(ValueError, "x must be >= 0"):

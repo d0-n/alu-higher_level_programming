@@ -61,6 +61,24 @@ class TestBase(unittest.TestCase):
         with open("Rectangle.json", "r", encoding="utf-8") as file:
             self.assertEqual(file.read(), "[]")
 
+    def test_rectangle_save_to_file_empty(self):
+        """Test Rectangle.save_to_file([]) writes an empty list."""
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r", encoding="utf-8") as file:
+            self.assertEqual(file.read(), "[]")
+
+    def test_square_save_to_file_none(self):
+        """Test Square.save_to_file(None) writes an empty list."""
+        Square.save_to_file(None)
+        with open("Square.json", "r", encoding="utf-8") as file:
+            self.assertEqual(file.read(), "[]")
+
+    def test_square_save_to_file_empty(self):
+        """Test Square.save_to_file([]) writes an empty list."""
+        Square.save_to_file([])
+        with open("Square.json", "r", encoding="utf-8") as file:
+            self.assertEqual(file.read(), "[]")
+
     def test_save_and_load_rectangles(self):
         """Test saving rectangles and loading them back."""
         r1 = Rectangle(10, 7, 2, 8)
