@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Query the local search API and print formatted JSON results."""
+"""Query local search API and print JSON result status."""
 
 import sys
 import requests

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Fetch a URL and print an error message for HTTP status codes >= 400."""
+"""Fetch URL and print HTTP error code when status is >= 400."""
 
 import sys
 import requests
