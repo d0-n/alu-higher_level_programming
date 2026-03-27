@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Fetch a URL and handle HTTP errors by printing the status code using urllib."""
+"""Fetch URL and print HTTP status code when urllib raises HTTPError."""
 
 import sys
 import urllib.error
