@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 const count = parseInt(process.argv[2]);
 
 if (isNaN(count)) {
